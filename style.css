@@ -13,4 +13,9 @@ section,canvas {
     height: 100%;
 }
 
+#rendering-elem{
+
+    position: absolute;
+    top : -1500000px;
+}
 

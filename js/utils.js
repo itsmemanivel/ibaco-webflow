@@ -9,7 +9,21 @@ var Utils = (function(){
     }
 
 
+
+    var preloadImg = function(index, assetsPath){
+        var img = new Image();
+
+        img.onload = function(){
+            var elem = document.getElementById('rendering-elem');
+            elem.append(img);
+        }
+        img.src = assetsPath+"Ibaco-"+(index+1).toString().padStart(5, '0')+".jpg";
+
+    }
+
+
     return{
-        createElement : createElement
+        createElement : createElement,
+        preloadImg : preloadImg
     }
 }());
